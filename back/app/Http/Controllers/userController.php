@@ -34,7 +34,8 @@ class userController extends Controller
         $newUser = $this->user->create($newUser);
 
         if($newUser!=null){
-            var_dump($newUser);
+            //var_dump($newUser);
+            return response()->json("registered", 200);
         }
         else{
             echo "failed";
