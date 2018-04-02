@@ -16974,9 +16974,11 @@
 
 				_login4.default.store(this, this.user).then(function (res) {
 					_this.users.push(_index2.default.single(_login2.default, res.body.data));
-					localStorage.setItem('access_token', 'bearer ' + res.body.data.token);
+					console.log(res.body.data.access_token);
+					localStorage.setItem('access_token', 'bearer ' + res.body.data.access_token);
+					console.log(localStorage.getItem('access_token'));
 					_this.user = _index2.default.reset(_login2.default);
-					// this.$router.push({ path:'/' });
+					_this.$router.push({ path: '/' });
 				}, function (err) {
 					_this.$refs.toast.setMessage('Error store user,check your user input again');
 					_this.$refs.toast.show();
@@ -19351,7 +19353,7 @@
 	      "width": "100%"
 	    },
 	    attrs: {
-	      "src": "mx.jpg",
+	      "src": "bgs.jpeg",
 	      "alt": "Los Angeles"
 	    }
 	  })])]), _vm._v(" "), _c('div', {

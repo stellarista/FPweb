@@ -33,9 +33,11 @@ export default {
 			.then(
 				res => {
 					this.users.push(Operator.single(UserModel, res.body.data));
-					localStorage.setItem('access_token','bearer '+ res.body.data.token);
+					console.log(res.body.data.access_token);
+					localStorage.setItem('access_token','bearer '+ res.body.data.access_token);
+					console.log(localStorage.getItem('access_token'));
 					this.user = Operator.reset(UserModel);
-					// this.$router.push({ path:'/' });
+					this.$router.push({ path:'/' });
 				},
 				err => {
 					this.$refs.toast.setMessage('Error store user,check your user input again');

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use JWTAuth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -31,7 +32,16 @@ class AuthController extends Controller
             return response()->json(['error' => 'Account not found. Please sign up.'], 401);
         }
 
-        return $this->respondWithToken($token);
+        $user=Auth::user();
+        $data =[
+            'access_token'=>$token
+        ];
+
+        $array = Array();
+        $array['data'] = $data;
+        return response()->json($array, 200);
+
+        // return $this->respondWithToken($token);
     }
 
     /**

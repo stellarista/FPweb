@@ -19,7 +19,7 @@
 	    <div class="carousel-inner">
 	      <div class="item active">
 	      	<a href="#">
-	        <img src="mx.jpg" alt="Los Angeles" style="width:100%;">
+	        <img src="bgs.jpeg" alt="Los Angeles" style="width:100%;">
 	        </a>
 	      </div>
 
