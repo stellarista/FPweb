@@ -1,0 +1,30 @@
+.bg {
+  background-image: url("pasbg.jpg");
+  height: 300px;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;             
+  align-items: center; 
+
+}
+
+.prod {
+display: block;
+margin-right: auto;
+margin-left: auto;
+}
+
+header {
+	font-size: 50px;
+	margin-top: 100px;
+}
+
+a:hover {
+text-decoration:none;
+}
+
+
